@@ -48,6 +48,6 @@ elif com == "resume":
 
     os.system("git init")
 
-    os.system(f"git remote origin {url}")
+    os.system(f"git remote add origin {url}")
 
     os.system(f"git pull {url}")
