@@ -12,7 +12,7 @@ if com == "upload":
 
     os.system("git add .")
 
-    message = ' '.join(sys.argv[2:]).replace('\"', '')
+    message = ' '.join(sys.argv[2:]).replace('\"', '').replace("'", "")
 
     os.system(f"git commit -m \"{message}\"")
 
@@ -51,3 +51,13 @@ elif com == "resume":
     os.system(f"git remote add origin {url}")
 
     os.system(f"git pull {url}")
+
+elif com == "status" or com == "modifications" or com == "changes":
+
+    os.system("git status")
+
+elif com == "help":
+
+    with open("/"+"/".join(__file__.split("/")[:-1])+"/"+"gitehelp.txt", "r") as file:
+
+        print(file.read())

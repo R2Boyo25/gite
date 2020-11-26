@@ -1,0 +1,7 @@
+Help for gite 1.0
+
+resume : pull a repo from a url, and set 'origin' to that url
+upload : usage 'gite upload "message"'; runs 'git add .'; 'git commit -m "message"'; 'git push -u origin master'
+update : just runs 'git pull'
+init : runs 'git init'; asks for a repo url; runs 'git remote add origin url-specified'
+status : runs 'git status'
