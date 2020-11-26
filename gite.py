@@ -56,8 +56,18 @@ elif com == "status" or com == "modifications" or com == "changes":
 
     os.system("git status")
 
+elif com == "log" or com == "history":
+
+    os.system("git log")
+
 elif com == "help":
 
     with open("/"+"/".join(__file__.split("/")[:-1])+"/"+"gitehelp.txt", "r") as file:
 
         print(file.read())
+
+else:
+
+    print("Command not found, sending to git.")
+
+    os.system(f'git {" ".join(sys.argv[1:])}')
