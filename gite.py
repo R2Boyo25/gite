@@ -1,5 +1,13 @@
 import os, subprocess, runner, sys
 
+"""
+
+A simple program to make using git quicker
+Fun Fact: I used this to upload itself to GitHub
+
+"""
+
+
 if len(sys.argv) == 1:
 
     print("You must choose a command!")
